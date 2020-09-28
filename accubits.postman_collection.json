@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "b2b5c64b-037d-430c-a538-9b1fbe76cfdd",
+		"name": "accubits",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Regester",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjVlNDRkZGU0OTY4OTk4MWI3MzVlYzE2NCIsInJvbGUiOiJBRE1JTiIsInJvbGVJZCI6IjVlYWJlMzQzNzlhNzcxMWJlY2JkNmQ1ZCJ9LCJpYXQiOjE1OTY0NDAzNzksImV4cCI6MTU5NjQ1NDc3OX0.l6h7X4A41F-6Aknz9Bl1tT0k7rrMTKPKuUIs_AO06os",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"akhil@yopmail.com\",\n    \"name\":\"Akhil\",\n    \"password\":\"12345678991\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"akhil@yopmail.com\",\n    \"password\":\"12345678991\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/details?token=235f818b-3857-4185-8401-01316f6a7bd5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"details"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "235f818b-3857-4185-8401-01316f6a7bd5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login-history",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/login-history?token=235f818b-3857-4185-8401-01316f6a7bd5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"login-history"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "235f818b-3857-4185-8401-01316f6a7bd5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
